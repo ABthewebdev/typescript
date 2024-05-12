@@ -1,11 +1,16 @@
-let car: {
-  brand: string;
-  year: number;
-} = { brand: "honda", year: 2024 };
-let arr: (string | number)[];
-arr = ["hi", 2];
+let people: (string | number)[] = ["alex", 6969];
 
-function Hello(name: string) {
-  console.log(name);
+let me: { name: string; age: number } = { name: "alex", age: 24 };
+function giveMe(n: string, age?: number) {
+  return `${n} ${age}`;
 }
-Hello("Alex");
+console.log(giveMe("alex", 24));
+
+function processInput(variable: string | number) {
+  if (typeof variable === "number") {
+    console.log(variable * 2);
+  } else {
+    console.log(variable);
+  }
+}
+processInput(10);
